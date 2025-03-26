@@ -1,0 +1,27 @@
+@use '../../utils/variables';
+
+.message {
+  width: fit-content;
+  max-width: 70%;
+  border-radius: 10px;
+  font-size: 15px;
+
+  &.user {
+    background: variables.$dark-green;
+    color: white;
+  }
+
+  &.assistant {
+    background: #F2F0EF;
+  }
+}
+
+// bootstrap automatically adds a bottom margin of 1rem,
+// which we do not need for the chat messages
+.message p {
+  margin-bottom: 0rem;
+}
+
+.time {
+  font-size: 10px;
+}

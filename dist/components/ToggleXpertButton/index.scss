@@ -1,0 +1,54 @@
+@use '../../utils/variables';
+
+.toggle {
+    bottom: 1rem;
+    height: 3rem;
+    z-index: 9999;
+
+    .btn {
+        border-radius: 2rem;
+    }
+
+    &.button-icon {
+        background-color: variables.$dark-green;
+        position: relative;
+        width: 125px;
+    }
+
+    &.open {
+        right: 31%;
+    }
+
+    &.closed {
+        right: 1%
+    }
+
+    /* The SVG should take up 100% of the height and width of the parent Button. */
+    svg {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+.action-message {
+    background-color: white;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.3), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    color: black;
+    font-size: 14px;
+    width: 40%;
+    text-align: left;
+    border-radius: 1rem;
+
+    // necessary to override user agent stylesheet, which adds a dark border to buttons
+    border-color: rgba(0,0,0,0);
+}
+
+.dismiss-button {
+    // override paragon width and height for dismiss button
+    width: 1.5rem !important;
+    height: 1.5rem !important;
+}
+
+.learning-assistant-popup-modal {
+    width: 100%;
+}
